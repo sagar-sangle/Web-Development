@@ -1,0 +1,39 @@
+<!-- CSS counters are "variables" maintained by CSS whose values can be incremented by CSS rules (to track how many times they are used). Counters let you adjust the appearance of content based on its placement in the document.
+
+Automatic Numbering With Counters
+CSS counters are like "variables". The variable values can be incremented by CSS rules (which will track how many times they are used).
+
+To work with CSS counters we will use the following properties:
+
+counter-reset - Creates or resets a counter
+counter-increment - Increments a counter value
+content - Inserts generated content
+counter() or counters() function - Adds the value of a counter to an element
+To use a CSS counter, it must first be created with counter-reset. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+    body{
+        counter-reset: increase;
+    }
+
+    h2::before{
+            counter-increment: increase;
+            content: "Section "counter(increase)":";
+    }
+</style>
+<body>
+
+    <h2>Chemistry</h2>
+    <h2>bilogy</h2>
+    <h2>history</h2>
+    
+</body>
+</html>

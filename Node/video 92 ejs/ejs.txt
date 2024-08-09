@@ -1,0 +1,111 @@
+Sure, let's go through each topic with a brief explanation and an example:
+
+1. **Embedding JavaScript**:
+   - EJS allows you to embed JavaScript code directly into your HTML templates using `<% %>` tags.
+   - Example:
+     ```html
+     <h1>Welcome, <%= username %></h1>
+     <p>Today is <%= new Date().toLocaleDateString() %></p>
+     ```
+
+2. **Template Data**:
+   - You can pass data from your server to your EJS templates using variables.
+   - Example:
+     ```javascript
+     app.get('/', (req, res) => {
+         res.render('index', { username: 'John' });
+     });
+     ```
+
+3. **Control Flow**:
+   - EJS provides control flow constructs like `<% if %>`, `<% else %>`, `<% for %>`, and `<% while %>` for conditional rendering and looping.
+   - Example:
+     ```html
+     <% if (user.isAdmin) { %>
+         <p>Welcome, admin!</p>
+     <% } else { %>
+         <p>Welcome, user!</p>
+     <% } %>
+     ```
+
+4. **Partial Views**:
+   - Partial views allow you to break your templates into smaller, reusable components.
+   - Example:
+     ```html
+     <!-- header.ejs -->
+     <header>
+         <h1>My Website</h1>
+     </header>
+
+     <!-- index.ejs -->
+     <%- include('header') %>
+     <p>Welcome to my website!</p>
+     ```
+
+5. **Custom Delimiters**:
+   - EJS allows you to customize the delimiters used for embedding JavaScript code.
+   - Example:
+     ```javascript
+     app.set('view engine', 'ejs');
+     app.set('delimiter', '%');
+     ```
+
+6. **Escaping**:
+   - EJS automatically escapes HTML characters to prevent XSS attacks. You can use `<%- %>` to render unescaped HTML.
+   - Example:
+     ```html
+     <p><%- htmlContent %></p>
+     ```
+
+7. **Layouts and Master Pages**:
+   - Layouts allow you to define a common structure for your web pages and inject content into specific regions.
+   - Example:
+     ```html
+     <!-- layout.ejs -->
+     <html>
+         <head>
+             <title><%= pageTitle %></title>
+         </head>
+         <body>
+             <%- body %>
+         </body>
+     </html>
+     ```
+
+8. **Filters**:
+   - Filters are functions that modify the output of template variables.
+   - Example:
+     ```html
+     <!-- Format date using a filter -->
+     <p>Today is <%= new Date() | dateFormat %></p>
+     ```
+     
+
+9. **Client-side Rendering**:
+   - EJS templates can be rendered on the client-side using JavaScript frameworks like Angular, React, or Vue.js.
+   - Example:
+     ```javascript
+     // Using EJS templates with Vue.js
+     new Vue({
+         el: '#app',
+         data: {
+             username: 'John'
+         }
+     });
+     ```
+
+10. **Error Handling**:
+    - EJS provides error handling mechanisms to handle errors during template rendering.
+    - Example:
+      ```javascript
+      app.get('/', (req, res) => {
+          try {
+              res.render('index', { username: 'John' });
+          } catch (error) {
+              console.error('Error rendering template:', error);
+              res.status(500).send('Internal Server Error');
+          }
+      });
+      ```
+
+These examples illustrate how you can use each feature of EJS to create dynamic and flexible web applications.

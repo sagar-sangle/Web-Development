@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /* @keyframes color {
+        from{
+            background-color: yellow;
+        }to{
+            background-color: red;
+        }
+        
+    }
+
+    .box{
+        width: 200px;
+        height: 200px;
+        animation-name: color;
+        background-color: red;
+        animation-duration: 4s;
+    } */
+
+    .box-2 {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  position: relative;
+  animation-name: example;
+  animation-duration: 4s;
+}
+
+@keyframes example {
+  0%   {background-color:red; left:0px; top:0px;}
+  25%  {background-color:yellow; left:200px; top:0px;}
+  50%  {background-color:blue; left:200px; top:200px;}
+  75%  {background-color:green; left:0px; top:200px;}
+  100% {background-color:red; left:0px; top:0px;}
+}
+</style>
+<body>
+
+    <div class="box-2">
+        
+    </div>
+    
+</body>
+</html>

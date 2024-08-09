@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        .gridcontainer{
+            background-color: aqua;
+            
+            display: grid;
+            grid-template-columns: auto auto auto;
+            padding: 10px;
+            column-gap: 10px;
+        }
+
+        .grid{
+
+            padding: 20px;
+            border: 4px solid black;
+            align-items: center;
+            font-size: 40px;
+
+        }
+
+        /* 
+         grid area for spanning
+        .grid-5{
+            grid-area: 2/1/span 2 / span3;
+        } */
+
+
+
+    </style>
+</head>
+
+<body>
+
+    <div class="gridcontainer">
+        <div class="grid grid-2">grid</div>
+        <div class="grid grid-3">grid</div>
+        <div class="grid grid-4">grid</div>
+        <div class="grid grid-1">grid</div>
+        <div class="grid grid-5">grid</div>
+        <div class="grid grid-6">grid</div>
+        <div class="grid grid-7">grid</div>
+        <div class="grid grid-8">grid</div>
+        <div class="grid grid-8">grid</div>
+    </div>
+    
+</body>
+</html>

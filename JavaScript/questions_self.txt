@@ -1,0 +1,3 @@
+are primitive data types mutable or not and why ? 
+differance bteween diffrent loops in js 
+differance bteween method and function in js

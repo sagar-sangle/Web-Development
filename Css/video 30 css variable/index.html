@@ -1,0 +1,104 @@
+<!-- Custom properties (sometimes referred to as CSS variables or cascading variables) are entities defined 
+    by CSS authors that represent specific values to be reused throughout a document. 
+    They are set using the @property at-rule or by custom property syntax (e.g., --primary-color: blue;).
+     Custom properties are accessed using the CSS var() function (e.g., color: var(--primary-color);).
+
+     when to use : 
+    Complex websites have very large amounts of CSS, and this often results in a lot of repeated CSS values.\
+     For example, it's common to see the same color used in hundreds of different places in stylesheets.
+      Changing a color that's been duplicated in many places requires a search and replace across all rules 
+      and CSS files. Custom properties allow a value to be defined in one place,
+       then referenced in multiple other places so that it's easier to work with. 
+
+       Another benefit is readability and semantics. For example, --main-text-color is easier to understand than the hexadecimal color #00ff00, especially if the color is used in different contexts. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* global declaration */
+        :root{
+            --primaryColor:rgb(115, 230, 70);
+            --secColor:rgb(169, 247, 179);
+        }
+
+        .nav{
+            background-color: var(--primaryColor);
+            font-size: larger;
+        }
+        .container{
+            margin-top: 50px;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 20px;
+            background-color: var(--secColor);
+        }
+
+        ul li{
+            list-style: none;
+            font-size: 35px;
+            margin: 10px;
+            padding: 20px;
+        }
+
+        ul{
+            display: flex;
+
+        }
+
+        /* local declaration */
+        footer{
+            --primaryColor:rgb(19, 44, 9);
+            bottom: 1px;
+            left: 50%;
+            position: absolute;
+            font-size: xx-large;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-weight: bold;
+            display: block;
+            /* fallback coor if var not found*/
+            color:var(--primaryColor,pink);
+        }
+
+       
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="nav">
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </div>
+
+
+
+    <div class="container">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente saepe deserunt dolorum amet enim, natus odit
+        veritatis, nihil quam error sint. Numquam, similique.
+    </div>
+
+    <footer>
+        The End
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!-- CSS gradients let you display smooth transitions between two or more specified colors.
+
+CSS defines three types of gradients:
+
+Linear Gradients (goes down/up/left/right/diagonally)
+Radial Gradients (defined by their center)
+Conic Gradients (rotated around a center point) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .Linear{
+/* by default it is top to bot */
+            background-image: linear-gradient(to right,orange,white,green);
+            text-align: center;
+            padding: 60px;
+        }
+        .radial{
+/* by default it is top to btot */
+            background-image: radial-gradient(orange,white,green);
+            text-align: center;
+            padding: 60px;
+        }
+        .conic{
+/* by default it is top to btot */
+            background-image: conic-gradient(red,yellow,green,blue);
+            text-align: center;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+        }
+
+    </style>
+</head>
+<div class="Linear">
+    <h2>Linear</h2>
+</div>
+
+<div class="radial">
+<h2>radial</h2>
+</div>
+<div class="conic">
+<h2>conic</h2>
+</div>
+
+</body>
+</html>

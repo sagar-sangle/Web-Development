@@ -1,0 +1,11 @@
+
+
+
+Internal CSS: Use for quick styling within a single HTML document, 
+offering simplicity and encapsulation of styles.
+
+External CSS: Ideal for large projects with multiple HTML pages, 
+providing better organization, reusability, and easy maintenance.
+
+Inline CSS: Suitable for quick, specific styling of individual elements, 
+offering immediate control without affecting other parts of the page.

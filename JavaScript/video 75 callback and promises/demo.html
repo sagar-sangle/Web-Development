@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Promise Object</h1>
+<h2>The then() Metod</h2>
+
+<p>Wait 3 seconds (3000 milliseconds) for this page to change.</p>
+
+<h1 id="demo"></h1>
+
+<script>
+  const myPromise = new Promise(function (myResolve, myReject) {
+    setTimeout(function () { myResolve("I love You !!"); }, 3000);
+  });
+  setTimeout(myReject("i hate u "), 3000);
+
+
+  myPromise.then(function (value, error) {
+
+    document.getElementById("demo").innerHTML = error;
+
+
+  });
+</script>
+
+</body>
+</html>

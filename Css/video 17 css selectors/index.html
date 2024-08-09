@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        /* elemenet selector  */
+        div{
+            background-color: grey;
+        }
+
+        /* class selector */
+        .red{
+            background-color: red;
+
+        }
+
+        /* id selector */
+        #pqr{
+            background-color: black;
+            color: white;
+        }
+
+        /*  contextual selector  : along with main tag subtag also get properties  */
+        p{
+            background-color: pink;
+            color: red;
+
+        }
+
+        /* child selector : only gets applied if child exist inside div */
+        div > p {
+            color: blue;
+            background-color: green;
+        }
+
+        /* descedent selector   : if there exist p inside div anywhere even if footer header any tag it gets applied to it*/
+        div p{
+                color: brown;
+                background-color: skyblue;
+        }
+
+        /* universal selector  */
+        *{
+            margin: 10;
+            padding: 0;
+        }
+
+        /* psudo selector  : applied after gets visited and so many more */
+
+        a:visited{
+            color: grey;
+          
+        }
+
+        a:hover{
+            color: white;
+            background-color: black;
+        }
+
+        main p:first-child{
+            background-color: yellow;
+
+        }
+
+        /* grouping selector  */
+        h3,h4{
+            background-color: orange;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: larger;
+            color: red;
+
+        }
+    </style>
+
+</head>
+<body>
+    
+    <div><h1> iam and element selector</h1></div>
+    <div class="red"><h1> Hello I'am an class selector </h1></div>
+    <div id="pqr"><h1>hello iam id selector </h1></div>
+    <p><i>iam  conterxual and inside paragrph tag</i></p>
+    <div ><p> iam a child selector inside div</p></div>
+    <div>
+        <span>
+            <p>
+                <h2>iam an descedent selector and inside div span and para</h2>
+            </p>
+        </span>
+    </div>
+
+    <a href="https://www.flipkart.com">Flipkart
+    </a>visit me and ill become grey
+
+   <main>
+    <p>
+        iam first child 
+    </p>
+    <p>iam second  child </p>
+</main>
+
+<h3>iam  h3 part of grouping seletor </h3>
+<h4>iam  h4 part of grouping seletor </h4>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .background{
+                width: 100vw;
+                height: 100vh;
+                background-color: rgb(32, 32, 95);
+                
+
+        }
+        .stage{
+                width: 60%;
+                height: 80%;
+                background-color: rgb(140, 160, 224);
+                margin: auto;                
+                top: 80px;
+                left: 300px;
+                display: flex;
+                position: absolute;
+                top: 50px;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+        }
+
+        .hat{
+            
+            background-image: url(hat2.png);
+            width: 350px;
+            height: 300px;
+            position: absolute;
+            object-fit: contain;           
+            top: 0px;
+            background-repeat: no-repeat;
+        }
+
+        .background input[type="text"]{
+            margin-top: 200px;
+            width: 60%;
+            border: 2px solid black;
+            padding: 30px;
+            font-size: 40px;
+            border-radius: 20px;
+
+        }
+
+        input::placeholder{
+            font-size: 40px;
+            color: red;
+        }
+
+        input[type="button"]{
+            width: 150px;
+            height: 50px;
+            margin-top: 50px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="background">
+            <div class="stage">
+
+                <div class="hat">
+             
+                </div>
+                <input type="text" name="name" id="name" placeholder="Enter The Magician">
+                <input type="button" value="SHOW !" id="btn">
+
+            </div>
+    </div>
+
+<script src="T:\Web-Development\Code-with-harry\JavaScript\video 83 Exercise Practise etc\wizard school\script.js"></script>
+</body>
+</html>

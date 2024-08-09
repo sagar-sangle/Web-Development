@@ -1,0 +1,53 @@
+
+img{
+    border: .8mm solid rgba(236, 117, 38, 0.76);
+    box-sizing: border-box;
+    
+}
+body{
+    background-color: #151b29;
+    
+    
+}
+img:hover{
+    border-color: #f1ff5c;
+    color: beige;
+    box-shadow: 0 0.5em 0.5em -.10em rgb(211, 231, 31);
+    transform: translateY(-0.20em);
+    
+
+    
+}
+
+button{
+    position: absolute;
+    top: 200px;
+    left: 1100px;
+    background: none;
+color: #f38c43;
+border:  3px solid;
+padding: 1em 2em;
+border-radius: 5%;
+
+}
+
+button:hover {
+    border-color: #f1ff5c;
+color: beige;
+box-shadow: 0 0.5em 0.5em -0.25em rgb(211, 231, 31);
+transform: translateY(-0.20em);
+
+}
+h2{
+    color: aqua;
+    font-weight: bolder;
+    font-family: 'Times New Roman', Times, serif;
+    
+
+
+}
+
+
+
+
+

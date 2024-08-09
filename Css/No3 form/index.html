@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .form-1 {
+            width: 70vw;
+            height: 70vh;
+            background-color: #f2f2f2;
+            margin: auto;
+            margin-top: 100px;
+            display: flex;
+            justify-content: center;
+
+
+        }
+
+        header label {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 40px;
+            font-weight: bold;
+            margin: 140px;
+
+        }
+
+        input[type=text] {
+            display: block;
+            height: 40px;
+            width: 600px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            margin: 10px;
+            padding: 10px 20px;
+
+        }
+
+        input[type=button] {
+            width: 600px;
+            margin: 13px;
+            height: 35px;
+            background-color: lawngreen;
+        }
+
+
+        .content label {
+            font-size: 25px;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form-1">
+        <form action="/action_page.html" method="post">
+            <header>
+                <label for="head">Employee Detail</label>
+            </header>
+            <div class="content">
+                <label for="First Name">First Name</label>
+                <input type="text" name="first Name" placeholder="Enter Your FirstName">
+                <label for="Last Name">Last Name</label>
+                <input type="text" name=" last Name" placeholder="Enter Your LastName">
+                <label for="Email">Email</label>
+                <input type="text" name="email" placeholder="Enter Your Name">
+                <input type="button" value="submit">
+            </div>
+        </form>
+    </div>
+
+</body>
+
+</html>

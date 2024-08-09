@@ -1,0 +1,25 @@
+.red{
+
+color: red;
+background-color: rgb(187, 149, 149);
+}
+
+.yellow{
+    color: yellow;
+    background-color: aliceblue;
+}
+
+.blue{
+    color: blue;
+    background-color: aliceblue;
+}
+.green{
+    color: green;
+    background-color: aliceblue;
+}
+
+
+#purple{
+    background-color: purple;
+    color: purple;
+}

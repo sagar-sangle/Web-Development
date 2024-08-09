@@ -1,0 +1,95 @@
+<!-- Semantic Elements:
+Semantic elements have meaningful names that tell about the type of content.
+ For example header, footer, table, … etc. HTML5 introduces many semantic elements as mentioned 
+ below which make the code easier to write and understand for the developer as well as instruct 
+ the browser on how to treat them. 
+
+<article>
+<aside>
+<details>
+<figcaption>
+<figure>
+<footer>
+<header>
+<main>
+<mark>
+<nav>
+<section> -->
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+
+        
+
+        <div class="nonsemantic">
+            <h1>Non semantic</h1>
+            <center>
+
+                <header><h1 style="background-color: pink;">&lt;div&gt;</h1></header>
+                <nav><h1 style="background-color: yellow;">&lt;span&gt;</h1></nav>
+                <aside style="float: left; height: 300px; width: auto; background-color: pink;" >
+                    <h1 style="margin-top: 115px;">&lt;div&gt;</h1>
+                </aside>
+
+                <main style="background-color: pink;  height: 300px; width: 305px; float: right;">
+                    <h1>&lt;div&gt;</h1>
+                    <article style="margin:30px; height: 170px; background-color: pink;">
+                        <h1>&lt;div&gt;</h1>
+                        <figure style="background-color:pink; height: 50px; margin: 10px;">
+                            <h2>&lt;div&gt;</h2>
+                            
+                        </figure>
+                        <p style=" height: 50px; margin: 10px; background-color:pink;">
+                           &lt;div&gt;
+                        </p>
+                    </article>
+                    <section style="background-color:pink; margin-top: -20px; margin-left: 10px; margin-right: 10px; height: 40px;">
+                        <h2>&lt;div&gt;</h2>
+                    </section>
+                </main>
+                
+            </center>
+                
+            </center>
+        </div>
+
+
+        <div class="semantic">
+            <h1> semantic</h1>
+            <center>
+                <header><h1 style="background-color: orangered;">&lt;header&gt;</h1></header>
+                <nav><h1 style="background-color: rgb(84, 216, 84);">&lt;Nav&gt;</h1></nav>
+                <aside style="float: left; height: 300px; width: auto; background-color: pink;" >
+                    <h1 style="margin-top: 115px;">&lt;aside&gt;</h1>
+                </aside>
+
+                <main style="background-color: skyblue;  height: 300px; width: 305px; float: right;">
+                    <h1>&lt;Main&gt;</h1>
+                    <article style="margin:30px; height: 170px; background-color: rgb(34, 154, 202);">
+                        <h1>&lt;Article&gt;</h1>
+                        <figure style="background-color: rgb(255, 198, 13); height: 50px; margin: 10px;">
+                            <h2>&lt;figure&gt;</h2>
+                            
+                        </figure>
+                        <p style=" height: 50px; margin: 10px; background-color: rgb(123, 224, 28);">
+                           &lt;p&gt;
+                        </p>
+                    </article>
+                    <section style="background-color: blue; margin-top: -20px; margin-left: 10px; margin-right: 10px; height: 40px;">
+                        <h2>&lt;section&gt;</h2>
+                    </section>
+                </main>
+                
+            </center>
+        </div>
+        
+
+    
+    </body>
+    </html>

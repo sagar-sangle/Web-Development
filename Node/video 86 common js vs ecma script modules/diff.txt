@@ -1,0 +1,11 @@
+ECMAScript (ES):
+ECMAScript is the standardized specification for the scripting language that JavaScript is based on. It defines the syntax, semantics, and core features of JavaScript.
+JavaScript implementations, such as those found in web browsers and Node.js, adhere to the ECMAScript specification.
+New versions of ECMAScript are released periodically, introducing new language features and improvements. For example, ECMAScript 6 (ES6), also known as ECMAScript 2015, introduced many new features such as arrow functions, classes, and modules.
+
+
+CommonJS:
+CommonJS is a module system for JavaScript that was originally designed for server-side JavaScript environments, specifically Node.js.
+It provides a way to organize and structure JavaScript code into reusable modules, allowing developers to write modular and maintainable code.
+CommonJS modules use the require() function to import other modules and the module.exports or exports objects to export values from a module.
+CommonJS is synchronous by default, meaning modules are loaded synchronously, which can potentially block the event loop in certain environments.

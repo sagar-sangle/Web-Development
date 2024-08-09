@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .grandpa{
+
+            width: 60%;
+            margin: auto;
+            padding: 20px;
+            background-color: yellow;
+        }
+        .father{
+
+            width: 60%;
+            margin: auto;
+            padding: 20px;
+            background-color: red;
+        }
+        .son{
+
+            width: 60%;
+            margin: auto;
+            padding: 20px;
+            background-color: blue;
+        }
+    </style>
+</head>
+
+
+
+<body>
+    
+    <div class="grandpa">
+        grandpa
+        <div class="father">
+            father
+            <div class="son">
+                son
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.querySelector(".son").addEventListener("click",(e)=>{
+                    alert("clicked son");
+        })
+        document.querySelector(".father").addEventListener("click",(e)=>{
+                    alert("clicked father");
+        })
+        document.querySelector(".grandpa").addEventListener("click",(e)=>{
+                    alert("clicked granpa");
+        },false)
+        //here all parent class get executed first this is bubbling : son father grandpa
+        //if u want to do the oppsite its known as capturing : first granpda father son 
+        //just set it tot true
+
+
+        //but if u dont want this propgation u can use method stopPropogation
+
+
+    </script>
+</body>
+</html>

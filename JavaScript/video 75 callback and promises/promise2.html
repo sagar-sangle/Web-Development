@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="text">
+            goodbye
+    </div>
+</body>
+<script>
+
+    async function hello(){
+        return Promise.reject("error")
+    }
+
+    hello().then(function(value){
+        document.getElementById("text").innerHTML=value
+    }
+).catch((error)=>{
+document.getElementById("text").innerHTML=error
+})
+
+
+</script>
+</html>
