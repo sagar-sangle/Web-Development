@@ -1,0 +1,5 @@
+the inti package is your custom jason packge manager which allows u to manage ur packeges and more data into it 
+
+
+its not mandory to have dependancies name inside package.json as long as it is presetn inside node_module 
+but for fiture if node mod gets delets u can recover that packge usingg packge j.json 
