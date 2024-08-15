@@ -1,15 +1,13 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
         * {
-            margin: 0px;
-            padding: 0px;
+            margin: 0;
+            padding: 0;
             box-sizing: border-box;
         }
 
@@ -17,8 +15,7 @@
             background-color: grey;
         }
 
-        .container{
-
+        .container {
             height: 450px;
             width: 280px;
             background-color: white;
@@ -28,36 +25,20 @@
         }
 
         .content {
-
             padding: 10px;
-
         }
 
         .content img {
             border-radius: 7px;
             width: 250px;
-            box-shadow: 2px 3px 5px;
             height: 150px;
-
-
+            box-shadow: 2px 3px 5px;
         }
 
         .hashtag {
             display: flex;
             list-style: none;
-
-        }
-
-        .content h3 {
-            font-size: 14px;
-            font-weight: normal;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        .content h2 {
-            color: brown;
-            font-family: cursive;
-            margin-bottom: 15px;
+            margin-top: 10px;
         }
 
         .hashtag li {
@@ -67,21 +48,31 @@
             border-radius: 10px;
             box-shadow: 2px 3px 5px;
             color: grey;
+        }
 
+        .content h2 {
+            color: brown;
+            font-family: cursive;
+            margin: 15px 0;
+        }
+
+        .content h3 {
+            font-size: 14px;
+            font-weight: normal;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
         .btn {
             padding: 15px;
             margin: 5px;
             position: relative;
-            font-family: Arial, Helvetica, sans-serif;
-            font-weight: bold;
             left: 100px;
             bottom: 20px;
-            border-style: none;
+            border: none;
             border-radius: 15px;
             background-color: rgb(146, 245, 245);
-
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
         }
 
         .btn a {
@@ -91,88 +82,46 @@
 
         .btn:hover {
             background-color: rgb(175, 250, 250);
-
         }
 
-        .main{
+        .main {
             display: flex;
             margin-top: 100px;
+            flex-wrap: wrap;
+            justify-content: center;
         }
 
-@media only screen and (max-width:400){
-    .main{
-        display: flex;
-        flex-direction: column;
-        
-    }
-    .container{
-        margin: 10px;
-    }
-    
-}
+        @media only screen and (max-width: 400px) {
+            .main {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .container {
+                margin: 10px;
+                width: 100%;
+            }
+        }
     </style>
 </head>
-
 <body>
     <div class="main">
         <div class="container">
             <div class="content">
-                <img src="data:image/jpeg;base64,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"
-                    alt="boat">
+                <img src="data:image/jpeg;base64,..." alt="boat">
                 <ul class="hashtag">
                     <li>Sea</li>
                     <li>Rafting</li>
                     <li>Beach</li>
                 </ul>
-
                 <h2>The Health Benefits of Boating</h2>
-                <h3> It’s true! Because of the physicality of boating coupled with its relaxing nature, boating can
-                    boost your mental and physical health in ways that you might not expect.</h3>
-
+                <h3>It’s true! Because of the physicality of boating coupled with its relaxing nature, boating can boost your mental and physical health in ways that you might not expect.</h3>
                 <button class="btn">
                     <a href="/">Read More..</a>
                 </button>
             </div>
         </div>
-        <div class="container">
-            <div class="content">
-                <img src="data:image/jpeg;base64,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"
-                    alt="boat">
-                <ul class="hashtag">
-                    <li>Sea</li>
-                    <li>Rafting</li>
-                    <li>Beach</li>
-                </ul>
-
-                <h2>The Health Benefits of Boating</h2>
-                <h3> It’s true! Because of the physicality of boating coupled with its relaxing nature, boating can
-                    boost your mental and physical health in ways that you might not expect.</h3>
-
-                <button class="btn">
-                    <a href="/">Read More..</a>
-                </button>
-            </div>
-        </div>
-        <div class="container">
-            <div class="content">
-                <img src="data:image/jpeg;base64,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"
-                    alt="boat">
-                <ul class="hashtag">
-                    <li>Sea</li>
-                    <li>Rafting</li>
-                    <li>Beach</li>
-                </ul>
-
-                <h2>The Health Benefits of Boating</h2>
-                <h3> It’s true! Because of the physicality of boating coupled with its relaxing nature, boating can
-                    boost your mental and physical health in ways that you might not expect.</h3>
-
-                <button class="btn">
-                    <a href="/">Read More..</a>
-                </button>
-            </div>
-        </div>
+        <!-- Additional containers can be added here -->
     </div>
 </body>
-
 </html>
