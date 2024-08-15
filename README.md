@@ -1,1 +1,1 @@
-this is used for cheking config
+hi hello bye
