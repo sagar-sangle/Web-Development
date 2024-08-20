@@ -1,0 +1,41 @@
+<%- include('./partials/head') %>
+<body>
+
+    <nav class="navbar bg-dark border-bottom border-body navbar-expand-lg" data-bs-theme="dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Navbar</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link active" aria-current="page" href="/">REDDIT</a>
+              <a class="nav-link" href="/cats">cats</a>
+              <a class="nav-link" href="/random">random</a>
+              <a class="nav-link" href="/reddit/soccer">soccer</a> 
+              <a class="nav-link" href="/reddit/chickens">chickens</a> 
+              <a class="nav-link" href="/reddit/mightyharvest">mightyharvest</a> 
+              
+              
+            </div>
+          </div>
+        </div>
+      </nav>
+    
+    <h1>BROWSING THE <%= name %> SUBREDDIT</h1>
+    <h2><%= description %></h2>
+    <h2>total subscribers : <b><%= subscribers  %></b></h2>
+    <hr>
+    <% for (const post of posts) {%>
+    
+    <div class="post">
+        <h3><%= post.title %></h3>
+        <h3>-<%= post.author %></h3>
+        <img src="<%= post.img %>" width="400px" height="300px" srcset="">
+    </div>
+    <hr>
+    <%} %>
+    
+    
+</body>
+</html>
