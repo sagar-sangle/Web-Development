@@ -1,0 +1,33 @@
+RESTful Routes in Node.js
+Last Updated : 05 Apr, 2023
+Routing: Routing is one of the most significant parts of your website or web application. Routing in Express is basic, adaptable, and robust. Routing is the mechanism by which requests (as specified by a URL and HTTP method) are routed(directed) to the code that handles them.
+
+ What is RESTful Routing? REST stands for Representational State Transfer which provides a way of mapping HTTP verbs (get, post, put, delete) and CRUD actions (create, read, update, delete) together. It is a convention for defining routes and when something follows the rest principle it is known as RESTFUL. 
+
+Instead of relying solely on the URL to indicate what site to visit, a RESTful route also depends on the HTTP verb and the URL. 
+
+This means that when your application receives an HTTP request, it introspects on that request and identifies the HTTP method and URL, connects that with a corresponding controller action that has that method and URL, executes the code in that action, and determines which response gets sent back to the client. The internet would be a really confusing place without a convention for how to handle URLs – to delete a Facebook photo might be www.facebook.com/delete-this-photo, but on Instagram, it might be www.instagram.com/remove-this-post. Without a specific convention to follow, it would be hard to create new content, edit content, and delete it. RESTful routes provide a design pattern that allows for easy data manipulation.
+
+For a route to be completely Restful it must do the following:
+
+Separate the client from the server.
+Not hold state between requests (i.e. all information necessary to respond to a request is available in each request: no data or state, is held by the server from request to request).
+Use HTTP and HTTP methods.
+Be reliable (for e.g most APIs follow the restful route pattern when specifying the process for authentication and important URLs).
+There are 7 different restful route patterns to follow when creating an application or web service that will interact with the server.
+
+
+URL	               HTTP Verb	Action
+/photos/	        GET	        index
+/photos/new	        GET	        new
+/photos	POST	                create
+/photos/:id     	GET	        show
+/photos/:id/edit	GET	        edit
+/photos/:id	        PATCH/PUT	        update
+/photos/:id	        DELETE          	destroy
+
+
+
+Example: For a blog website these Routes would be defined as:
+
+ 

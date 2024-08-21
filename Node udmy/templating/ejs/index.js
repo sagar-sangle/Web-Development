@@ -11,6 +11,8 @@
    app.use(express.static('public'))
    app.set('view engine','ejs')
    app.set('views',path.join(__dirname,'/views'))
+
+   
    app.use("/home",(req,res)=>{
 
     res.render('home');
@@ -24,7 +26,6 @@
    app.get('/cats',(req,res)=>{
       let cats = ['tom','gojo','chiki','baby','mushu','pillu','kitty']
       res.render('cats',{cats})
-
    })
 
    app.get('/random',(req,res)=>{
