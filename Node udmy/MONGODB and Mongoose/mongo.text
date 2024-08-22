@@ -1,0 +1,79 @@
+Instead of just saving into the file .
+Why use DataBase :
+
+1)database can handle large amount of data and store in a much better way (compactly)
+
+2)they provide tool for easy insertion querying and updating of data 
+
+3 ) they generally offer secutity feature and controll over access to data 
+
+4) they generally scale well (size or performace compared to stroing in file)
+
+we learned why we use nosql 
+
+now why we use mongo over other nosql databases 
+
+1) it it used most commonly used with node and mern mean
+2)it is easy to get started with but tricky to master
+4)large community and popular with js
+
+BSON VS JSON ? 
+
+Key Features of BSON:
+Binary Encoding:
+
+BSON is a binary representation, meaning it uses binary encoding for data storage and transfer, which can be more efficient than text-based formats like JSON.
+Rich Data Types:
+
+BSON supports a wider range of data types than JSON. In addition to standard types like integers and strings, BSON can represent more complex data types like dates, binary data, and embedded documents.
+Size Efficiency:
+
+While BSON is more compact than JSON in many cases, it can also be more efficient for certain data types. For example, BSON encodes integers in a fixed-size format which can reduce the overhead compared to JSON's variable-length encoding.
+Ease of Use:
+
+BSON is designed to be easy to traverse and parse, which makes it suitable for use in databases and other systems where performance and efficient data access are important.
+Usage in MongoDB:
+MongoDB, a popular NoSQL database, uses BSON as its internal data storage and network transfer format. When you interact with MongoDB using JSON-like queries, the database converts these queries to BSON for processing and storage. Similarly, when you retrieve data from MongoDB, it is converted from BSON to JSON for use in applications.
+
+BSON vs JSON:
+Size and Efficiency: BSON can be more efficient in terms of size and processing due to its binary format and fixed-length encoding for certain data types.
+Complex Data Types: BSON supports additional data types not available in JSON, such as ObjectId, Date, and Binary data.
+Human Readability: JSON is text-based and human-readable, while BSON is binary and not meant to be human-readable.
+In summary, BSON is a key component of MongoDB’s data handling and is designed to offer efficient and flexible data representation.
+
+CRUD OPERATION : 
+
+CREATE : 
+
+to insert one -> db.collection_name.insertOne({....})
+to insert many -> db.collection_name.insertMany({....})
+to figure out itself -> db.collection_name.insert({....})
+
+we can pass array of object in insertmany and insert
+
+UPDATE :
+
+db.cats.updateOne({name:"baby"},{$set:{age:4}})
+//it updates age to 4 now
+
+but what if if pss :
+db.cats.updateOne({name:"baby"},{$set:{age:5,color;"gray"}})
+//even though theres no such field as color it will add one
+
+
+to updatae many -> 
+db.cats.updateMany({isFriendly:true} ,{$set:{isAlive:true}})
+//it add propertis to all
+
+--> adding date or updating one --> db.cats.updateOne({name:"tom"},{$set{name:"Gojo"} ,$currentDate:{lastchanged:true}})
+//it will add one its a extra or special data type in BSON
+
+READ :
+
+db.cats.find({name:"tom"})
+
+
+DELETE :
+
+deltes entire -> db.cats.deleteMany({})
+delete one 
