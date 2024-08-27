@@ -59,7 +59,7 @@ async function main(){
 
         
         console.log(kitts);
-        console.log("kitten showd ..");        
+        console.log("kitten showed..");        
 
 }
 
